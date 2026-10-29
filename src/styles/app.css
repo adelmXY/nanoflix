@@ -706,3 +706,307 @@ footer a {
     font-size: 26px;
   }
 }
+
+/* Streaming shell: the product brief takes precedence over landing-page styling. */
+:root {
+  --bg: #141414;
+  --surface: #222;
+  --raised: #333;
+  --ink: #f5f5f1;
+  --muted: #bdbdb9;
+}
+header {
+  justify-content: flex-start;
+  padding-block: 16px;
+  gap: 42px;
+}
+.brand {
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+nav {
+  flex: 1;
+  gap: 24px;
+}
+nav a {
+  font-size: 14px;
+}
+nav a:last-child {
+  margin-left: auto;
+}
+nav a.active,
+nav a:hover {
+  text-decoration: none;
+  color: var(--ink);
+}
+nav a.active {
+  font-weight: 700;
+}
+.home-header {
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(#141414ee, #14141400);
+}
+.home-screen .hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+  height: min(70vh, 680px);
+  margin: -76px calc(-1 * var(--margin)) 0;
+  padding: 120px var(--margin) 110px;
+  background: #292a28;
+}
+.home-screen .hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.home-screen .hero-art .media {
+  height: 100%;
+  aspect-ratio: auto;
+  background: #292a28;
+}
+.home-screen .hero-art .placeholder {
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 100px var(--margin) 0;
+  color: var(--muted);
+}
+.home-screen .hero-art .placeholder > span {
+  display: none;
+}
+.home-screen .hero-art .placeholder small {
+  font-size: 12px;
+}
+.home-screen .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #141414ee 0%, #141414a6 40%, #14141400 78%),
+    linear-gradient(0deg, #141414 0%, #14141400 34%);
+}
+.home-screen .hero-copy {
+  align-self: auto;
+  width: min(640px, 55%);
+  animation: enter 0.35s ease-out both;
+}
+.home-screen .hero-copy .hero-signature {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.home-screen .hero h1 {
+  font-size: clamp(48px, 5.8vw, 86px);
+  line-height: 0.97;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  margin-bottom: 22px;
+  text-wrap: initial;
+}
+.hero-series-name {
+  display: block;
+  font-size: 0.34em;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.hero-production-name {
+  display: block;
+}
+.hero-title-divider {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.home-screen .hero-copy .meta {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.home-screen .hero-copy > p:not(.meta):not(.hero-signature) {
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 56ch;
+  margin-bottom: 24px;
+}
+.home-screen .hero .actions {
+  gap: 12px;
+}
+.home-screen .hero .primary {
+  background: #f5f5f1;
+  color: #141414;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 12px 24px;
+}
+.home-screen .hero .primary:hover {
+  background: #d8d8d5;
+}
+.home-screen .hero-secondary {
+  background: #626260aa;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px 24px;
+}
+.home-screen .hero-secondary:hover {
+  background: #626260;
+  color: var(--ink);
+}
+.home-collections {
+  position: relative;
+  margin-top: -50px;
+}
+.home-collections .row {
+  margin: 0 0 34px;
+}
+.home-collections .section-heading {
+  margin-bottom: 12px;
+}
+.home-collections h2 {
+  font-size: 23px;
+  letter-spacing: -0.025em;
+}
+.home-collections .row-controls {
+  gap: 4px;
+}
+.home-collections .row-controls button {
+  background: transparent;
+  padding: 4px 10px;
+}
+.home-collections .rail {
+  gap: 12px;
+}
+.home-collections .rail .card {
+  flex-basis: clamp(160px, 14vw, 210px);
+}
+.home-collections .media {
+  background: #282828;
+  border-radius: 4px;
+}
+.home-collections .card:nth-child(3n + 2) .media {
+  background: #2d302d;
+}
+.home-collections .card:nth-child(3n) .media {
+  background: #30302d;
+}
+.home-collections .card .placeholder {
+  padding: 18px;
+  gap: 12px;
+}
+.home-collections .card .placeholder span {
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+.home-collections .card .placeholder small {
+  font-size: 11px;
+}
+.home-collections .card h3 {
+  font-size: 14px;
+  margin: 10px 0 4px;
+  line-height: 1.35;
+}
+.home-collections .card p {
+  font-size: 12px;
+}
+@media (max-width: 1000px) {
+  header {
+    gap: 10px 28px;
+  }
+  nav {
+    flex-basis: 100%;
+  }
+  .home-screen .hero {
+    margin-top: -124px;
+    min-height: 650px;
+    padding-top: 168px;
+  }
+  .home-screen .hero-copy {
+    width: min(600px, 75%);
+  }
+  .home-screen .hero-art .placeholder {
+    padding-top: 152px;
+  }
+  .home-screen .hero h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding-block: 14px;
+  }
+  nav {
+    gap: 22px;
+  }
+  nav a:last-child {
+    margin-left: 0;
+  }
+  .home-screen .hero {
+    min-height: 590px;
+    height: auto;
+    padding: 164px var(--margin) 100px;
+  }
+  .home-screen .hero-copy {
+    width: 100%;
+  }
+  .home-screen .hero h1 {
+    font-size: clamp(42px, 11vw, 62px);
+  }
+  .home-screen .hero-series-name {
+    font-size: 20px;
+  }
+  .home-screen .hero-copy .hero-signature {
+    font-size: 11px;
+    margin-bottom: 18px;
+  }
+  .home-screen .hero-copy > p:not(.meta):not(.hero-signature) {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  .home-screen .hero .actions {
+    gap: 10px;
+  }
+  .home-screen .hero .button {
+    padding: 11px 15px;
+    font-size: 14px;
+  }
+  .home-screen .hero-art .placeholder {
+    padding-top: 126px;
+  }
+  .home-screen .hero-art .placeholder small {
+    font-size: 11px;
+  }
+  .home-screen .hero::after {
+    background: linear-gradient(
+      0deg,
+      #141414 0%,
+      #141414a6 70%,
+      #14141400 100%
+    );
+  }
+  .home-collections {
+    margin-top: -46px;
+  }
+  .home-collections h2 {
+    font-size: 21px;
+  }
+  .home-collections .rail .card {
+    flex-basis: 145px;
+  }
+  .home-collections .card .placeholder {
+    padding: 14px;
+  }
+  .home-collections .card .placeholder span {
+    font-size: 18px;
+  }
+}

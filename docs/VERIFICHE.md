@@ -59,3 +59,11 @@ Top three problems (most visible first), each with the screenshot it shows in an
 3. tutte le schermate: superfici prive di artwork; limite di ambito documentato, nessuna immagine procurata per mascherarlo.
 
 Il lint della skill sulla versione formattata termina con 0 FAIL e un WARN `numbering`: è il numero effettivo degli episodi E01–E14, richiesto dal brief, non numerazione decorativa. L'inspector finale termina con 0 FAIL e i due WARN già motivati. Non si dichiara una validazione perfetta o la riproduzione reale superata.
+
+## Revisione della home su richiesta dell'utente
+
+La prima composizione era troppo editoriale rispetto al riferimento Netflix. La home ora usa un hero panoramico a tutta larghezza con testo e comandi sovrapposti, navigazione compatta, azioni neutre bianche/grigie e raccolte più dense subito sotto. Prossimamente è la prima raccolta non vuota, per mostrare i quattro titoli senza inventare nuove produzioni. Il catalogo resta configurabile e nessun titolo futuro acquisisce un falso Play.
+
+La richiesta dell'utente prevale sulle regole promozionali di taste-skill: si adottano esplicitamente sfumature neutre di leggibilità sullo spazio del futuro hero, la firma della produzione e poster ripetuti. Il fondo panoramico resta un segnaposto CSS, senza illustrazioni, immagini o video reperiti. Il marchio e l'accento di Fuori Scena restano distinti da Netflix. Le verifiche taste-skill della sezione precedente si riferiscono alla prima versione; non vanno attribuite automaticamente al restyling.
+
+Per la revisione: catalogo, TypeScript, ESLint e build superati; 8 test Playwright superati a 320/390/768/1440 px. Anteprime desktop e mobile esaminate, senza collisioni fra navigazione, titolo, comandi e prima raccolta. La somiglianza definitiva dipenderà dai materiali dell'utente: non si promette lo stesso impatto di un catalogo popolato di locandine.

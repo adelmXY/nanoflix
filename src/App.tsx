@@ -100,7 +100,7 @@ export default function App() {
       <a href="#contenuto" className="skip">
         Vai al contenuto
       </a>
-      <header>
+      <header className={location.pathname === "/" ? "home-header" : undefined}>
         <Link className="brand" to="/">
           {catalog?.site.logo ? (
             <img src={catalog.site.logo.src} alt={catalog.site.name} />

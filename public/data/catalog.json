@@ -160,6 +160,11 @@
       "sortByPublication": true
     },
     {
+      "id": "futuri",
+      "label": "Prossimamente",
+      "titleIds": ["ultimo-attimo", "riparazione", "apparizione", "pausa"]
+    },
+    {
       "id": "serie",
       "label": "Le nostre serie",
       "titleIds": ["ultimo-attimo"]
@@ -173,11 +178,6 @@
       "id": "brividi",
       "label": "Brividi in ufficio",
       "titleIds": ["apparizione"]
-    },
-    {
-      "id": "futuri",
-      "label": "Prossimamente",
-      "titleIds": ["ultimo-attimo", "riparazione", "apparizione", "pausa"]
     }
   ]
 }

@@ -6,11 +6,35 @@ import { Row, Empty } from "../components/Shared";
 export default function Home({ catalog: c }: { catalog: Catalog }) {
   const t = c.titles.find((t) => t.id === c.featuredId);
   return (
-    <>
+    <div className="home-screen">
       {t ? (
         <section className="hero">
-          <h1>{t.title}</h1>
+          <div className="hero-art" aria-hidden="true">
+            <Media
+              asset={t.images.hero ?? t.images.landscape}
+              label="Immagine panoramica della produzione"
+              mobileAsset={t.images.heroMobile}
+              ratio="hero"
+              eager
+            />
+          </div>
           <div className="hero-copy">
+            <p className="hero-signature">Una produzione {c.site.name}</p>
+            <h1>
+              {t.title.includes(" — ") ? (
+                <>
+                  <span className="hero-series-name">
+                    {t.title.split(" — ")[0]}
+                  </span>
+                  <span className="hero-title-divider"> — </span>
+                  <span className="hero-production-name">
+                    {t.title.split(" — ").slice(1).join(" — ")}
+                  </span>
+                </>
+              ) : (
+                t.title
+              )}
+            </h1>
             <p className="meta">
               {t.type === "series"
                 ? "Serie originale"
@@ -29,20 +53,10 @@ export default function Home({ catalog: c }: { catalog: Catalog }) {
                     : "Guarda ora"}{" "}
                 <span aria-hidden="true">→</span>
               </Link>
-              <Link className="text-link" to="/catalogo">
+              <Link className="button hero-secondary" to="/catalogo">
                 Sfoglia il catalogo →
               </Link>
             </div>
-          </div>
-          <div className="hero-art">
-            <Media
-              asset={t.images.hero ?? t.images.landscape}
-              label={t.title}
-              mobileAsset={t.images.heroMobile}
-              ratio="hero"
-              eager
-            />
-            <p>{c.site.tagline}</p>
           </div>
         </section>
       ) : (
@@ -53,16 +67,18 @@ export default function Home({ catalog: c }: { catalog: Catalog }) {
         </div>
       )}
       {!c.titles.length && <Empty title="Le storie stanno arrivando" />}
-      {c.rows.map((r) => {
-        let titles = r.titleIds
-          .map((id) => c.titles.find((t) => t.id === id)!)
-          .filter((t) => !r.availableOnly || t.status === "available");
-        if (r.sortByPublication)
-          titles = [...titles].sort((a, b) =>
-            (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""),
-          );
-        return <Row key={r.id} label={r.label} titles={titles} />;
-      })}
-    </>
+      <div className="home-collections">
+        {c.rows.map((r) => {
+          let titles = r.titleIds
+            .map((id) => c.titles.find((t) => t.id === id)!)
+            .filter((t) => !r.availableOnly || t.status === "available");
+          if (r.sortByPublication)
+            titles = [...titles].sort((a, b) =>
+              (b.publishedAt ?? "").localeCompare(a.publishedAt ?? ""),
+            );
+          return <Row key={r.id} label={r.label} titles={titles} />;
+        })}
+      </div>
+    </div>
   );
 }
