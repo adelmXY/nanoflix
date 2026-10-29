@@ -203,13 +203,13 @@ export function selectMedia(
   const version = p.get("versione"),
     id = p.get("episodio");
   if (
-    (id && version) ||
+    (p.has("episodio") && p.has("versione")) ||
     [...p.keys()].some((k) => !["episodio", "versione"].includes(k)) ||
     p.getAll("versione").length > 1 ||
     p.getAll("episodio").length > 1
   )
     return { label: t.title, error: "Parametri del player non validi" };
-  if (version) {
+  if (version !== null) {
     if (!["film", "trailer"].includes(version))
       return { label: t.title, error: "Versione non valida" };
     return {

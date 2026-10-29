@@ -34,6 +34,7 @@ Layout words by section: hero=fascia e split / serie=locandine / episodi=elenco 
 Scores: design 6 · usability 8 · creativity 6 · content 5 → overall 6.4.
 Caps applied: assenza intenzionale di fotografie e presenza di segnaposto; nessuna pretesa di artwork definitivo.
 Top three problems (most visible first), each with the screenshot it shows in and the fix:
+
 1. Titolo su tre righe nelle prime schermate: spostato su tutta la griglia, due righe su mobile.
 2. Simbolo freccia non disponibile nel font delle schermate: sostituito con freccia semplice.
 3. Segnaposto hero legato al solo titolo iniziale: ora legge dal catalogo; ridotta la dimensione per titoli lunghi.
@@ -43,3 +44,18 @@ Il risultato resta volutamente una valutazione della struttura senza media, non 
 ## Collaudi rinviati
 
 Video/audio reali, codec, sottotitoli, fullscreen, seek, buffering, transizioni e autoplay tra file su browser e dispositivi reali. Anche immagini definitive, punto focale, trailer, montaggio e diritti/pubblicabilità dei materiali saranno verificati al loro inserimento. Condivisione nativa e appunti vanno verificati anche su HTTPS e sui dispositivi di destinazione; il fallback selezionabile è collaudato. Nessuna preview localhost interna viene presentata come pubblica. Nessun deploy Firebase o servizio cloud attivato.
+
+ROUND 2 (build finale)
+Seen in one second: nome della produzione e azione Esplora la serie.
+Idea (one sentence): i microepisodi restano una sequenza ordinata di schede consultabili.
+Live thing: ricerca e filtri del catalogo, scheda con episodi.
+Layout words by section: hero=fascia e split / serie=locandine / episodi=elenco / catalogo=griglia.
+Scores: design 6 · usability 8 · creativity 6 · content 5 → overall 6.4.
+Caps applied: immagini assenti e segnaposto deliberati come richiesto dal brief.
+Top three problems (most visible first), each with the screenshot it shows in and the fix:
+
+1. desktop-page-01: raccolte poco dense con solo quattro titoli; mantenute senza duplicazioni artificiali, densità da rivalutare con contenuti reali.
+2. mobile-fold: navigazione su riga scorrevole; resta utilizzabile da touch e tastiera, senza overflow della pagina.
+3. tutte le schermate: superfici prive di artwork; limite di ambito documentato, nessuna immagine procurata per mascherarlo.
+
+Il lint della skill sulla versione formattata termina con 0 FAIL e un WARN `numbering`: è il numero effettivo degli episodi E01–E14, richiesto dal brief, non numerazione decorativa. L'inspector finale termina con 0 FAIL e i due WARN già motivati. Non si dichiara una validazione perfetta o la riproduzione reale superata.

@@ -142,6 +142,8 @@ describe("Disponibilità e selezione media", () => {
       "episodio=non-esiste",
       "episodio=",
       "versione=altro",
+      "versione=",
+      "episodio=&versione=",
       "episodio=x&versione=film",
       "versione=film&versione=trailer",
       "foo=bar",
