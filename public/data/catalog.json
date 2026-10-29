@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "name": "Fuori Scena",
+    "tagline": "Produzioni ad alto tasso di colleghi",
+    "accent": "#d5f667",
+    "description": "Serie, corti e scene impossibili. Le nostre produzioni originali, tutte in un posto."
+  },
+  "featuredId": "ultimo-attimo",
+  "titles": [
+    {
+      "id": "ultimo-attimo",
+      "slug": "carminuccio-alexiuccio-ultimo-attimo",
+      "type": "series",
+      "title": "Carminuccio & Alexiuccio — L'Ultimo Attimo",
+      "synopsis": "Un'onda misteriosa attraversa la città. Carminuccio e Alexiuccio si lanciano verso una torre dove il tempo sta smettendo di obbedire alle sue regole. Tra colleghi in pericolo e imprevisti assurdi, ogni secondo conta.",
+      "status": "coming_soon",
+      "genres": ["Supereroi", "Commedia"],
+      "categories": ["Le nostre serie"],
+      "cast": ["Carminuccio", "Alexiuccio"],
+      "images": {},
+      "seasons": [
+        {
+          "number": 1,
+          "episodes": [
+            {
+              "id": "ultimo-attimo-s01e01",
+              "number": 1,
+              "title": "ASPETTA UN ATTIMO",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e02",
+              "number": 2,
+              "title": "NON SAI INTERPRETARE NEANCHE UN URL",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e03",
+              "number": 3,
+              "title": "TU E LA TUA GENERAZIONE MI UCCIDERETE",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e04",
+              "number": 4,
+              "title": "TI SEMBRA CORRETTO?",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e05",
+              "number": 5,
+              "title": "TU E I TUOI AMICI MI STATE STANCANDO",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e06",
+              "number": 6,
+              "title": "ILLUSIONE DI INVULNERABILITA'",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e07",
+              "number": 7,
+              "title": "BOMBOLETTA DI LACCA COME LANCIAFUOCO",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e08",
+              "number": 8,
+              "title": "IERI SERA, DEI VINI BUONISSIMI!",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e09",
+              "number": 9,
+              "title": "SEI UNO SCIOCCO, NON MI HAI FORNITO LA PASSWORD",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e10",
+              "number": 10,
+              "title": "TU MIA... TU MIO...",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e11",
+              "number": 11,
+              "title": "STA FUNZIONANDO TUTTO!",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e12",
+              "number": 12,
+              "title": "NO ADI -> NO PAZIENTI -> NO CONVERGO",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e13",
+              "number": 13,
+              "title": "MANTENGA IL PESO!",
+              "status": "coming_soon"
+            },
+            {
+              "id": "ultimo-attimo-s01e14",
+              "number": 14,
+              "title": "ALTRO CHE ATTENDERE UN ATTIMO, LO AVREI PICCHIATO!",
+              "status": "coming_soon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "riparazione",
+      "slug": "riparazione",
+      "type": "short",
+      "title": "Riparazione acrobatica",
+      "synopsis": "Scheda testuale di esempio per esplorare il catalogo. Titolo e contenuto sono provvisori.",
+      "status": "coming_soon",
+      "genres": ["Commedia"],
+      "categories": ["Corti e scene impossibili"],
+      "cast": [],
+      "images": {},
+      "example": true
+    },
+    {
+      "id": "apparizione",
+      "slug": "apparizione",
+      "type": "animation",
+      "title": "Una presenza in ufficio",
+      "synopsis": "Scheda testuale di esempio per esplorare il catalogo. Titolo e contenuto sono provvisori.",
+      "status": "coming_soon",
+      "genres": ["Brividi"],
+      "categories": ["Brividi in ufficio"],
+      "cast": [],
+      "images": {},
+      "example": true
+    },
+    {
+      "id": "pausa",
+      "slug": "pausa",
+      "type": "short",
+      "title": "La pausa impossibile",
+      "synopsis": "Scheda testuale di esempio per esplorare il catalogo. Titolo e contenuto sono provvisori.",
+      "status": "coming_soon",
+      "genres": ["Commedia"],
+      "categories": ["Corti e scene impossibili"],
+      "cast": [],
+      "images": {},
+      "example": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "ultime",
+      "label": "Ultime uscite",
+      "titleIds": ["ultimo-attimo", "riparazione", "apparizione", "pausa"],
+      "availableOnly": true,
+      "sortByPublication": true
+    },
+    {
+      "id": "serie",
+      "label": "Le nostre serie",
+      "titleIds": ["ultimo-attimo"]
+    },
+    {
+      "id": "corti",
+      "label": "Corti e scene impossibili",
+      "titleIds": ["riparazione", "pausa"]
+    },
+    {
+      "id": "brividi",
+      "label": "Brividi in ufficio",
+      "titleIds": ["apparizione"]
+    },
+    {
+      "id": "futuri",
+      "label": "Prossimamente",
+      "titleIds": ["ultimo-attimo", "riparazione", "apparizione", "pausa"]
+    }
+  ]
+}
